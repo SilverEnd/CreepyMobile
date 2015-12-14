@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.yifan_zuo.creepymobile.LaunchActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="64dp"
+        android:text="Creepy Mobile"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/go_to_search_user_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Search for users"/>
+
+
+    <Button
+        android:id="@+id/go_to_current_nearby_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Discover public posts around me"/>
+
+
+</LinearLayout>

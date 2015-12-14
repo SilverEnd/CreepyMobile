@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://developers.google.com/maps/documentation/android/infowindows#add_an_info_window -->
+<html lang="en" class="devsite"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script src="./Info Windows - Google Maps Android API v2 — Google Developers_files/cb=gapi.loaded_1" async=""></script><script src="./Info Windows - Google Maps Android API v2 — Google Developers_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/platform.js" gapi_processed="true"></script><script async="" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/analytics.js"></script><script>var b=window.devsite||{};b.timing={};window.devsite=b;window.devsite.timing=b.timing;b.timing.timers=[];b.timing.tick=function(d,a,g){for(var c=0;c<b.timing.timers.length;c++)b.timing.timers[c].tick(d,a,g)};window.devsite.timing.tick=b.timing.tick;b.timing.report=function(d){b.setTimeout(function(){for(var a=0;a<b.timing.timers.length;a++)window.jstiming.report(b.timing.timers[a],d)},500)};
+b.timing.init=function(d){b.timing.timers.push(window.jstiming.load);if(d){var a=new window.jstiming.Timer;a.name=d;b.timing.timers.push(a)}document.addEventListener&&window.addEventListener&&(document.addEventListener("DOMContentLoaded",b.timing.handleDomContentLoaded,!1),window.addEventListener("load",b.timing.handleLoad,!1))};b.timing.handleDomContentLoaded=function(){b.timing.tick("ol");document.removeEventListener("DOMContentLoaded",b.timing.handleDomContentLoaded,!1)};
+b.timing.handleLoad=function(){window.removeEventListener("load",b.timing.handleLoad,!1);var d=document.querySelector("#devsite-request-elapsed");d&&(d=parseInt(d.getAttribute("data-request-elapsed"),10))&&(b.timing.tick("_st_start",null,1),b.timing.tick("st","_st_start",1+d));b.timing.tick("prt");b.timing.report()};(function(){function d(a){this.t={};this.tick=function(a,d,c){var e=void 0!=c?c:(new Date).getTime();this.t[a]=[e,d];if(void 0==c)try{window.console.timeStamp("CSI/"+a)}catch(f){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var g=a?new d(a.responseStart):new d;window.jstiming={Timer:d,load:g};if(a){var c=a.navigationStart,f=a.responseStart;0<c&&f>=c&&(window.jstiming.srt=f-c)}if(a){var e=window.jstiming.load;0<c&&f>=c&&(e.tick("_wtsrt",void 0,c),e.tick("wtsrt_",
+"_wtsrt",f),e.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),e&&0<c&&(e.tick("_tbnd",void 0,window.chrome.csi().startE),e.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,e&&0<c&&(e.tick("_tbnd",void 0,window.external.startE),e.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(h){}})();
+devsite.timing.init('DocPageDynamic');</script>
+    
+      <link href="https://developers.google.com/maps/documentation/android/infowindows" rel="canonical">
+    
+    <meta charset="utf-8">
+    
+      
+    
+    <meta name="xsrf_token" content="mOvP8l196JtmzU1XzTpFdgIPSRbUzWaWdP5IqkckBCI6MTQzMTA2NDAyOTQ3MDcyMA">
+      <link rel="stylesheet" type="text/css" href="./Info Windows - Google Maps Android API v2 — Google Developers_files/screen-maia.css">
+      <link href="./Info Windows - Google Maps Android API v2 — Google Developers_files/css" rel="stylesheet" type="text/css">
+    
+      
+        <link rel="stylesheet" type="text/css" href="./Info Windows - Google Maps Android API v2 — Google Developers_files/screen-docs.css">
+      
+      
+      <link rel="stylesheet" type="text/css" id="screen-foot" data-href="https://developers.google.com/_static/78793de2ab/css/screen-foot.css" href="./Info Windows - Google Maps Android API v2 — Google Developers_files/screen-foot.css">
+    
+    <link rel="shortcut icon" href="https://developers.google.com/_static/78793de2ab/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://developers.google.com/_static/78793de2ab/images/apple-touch-icon.png">
+    <link href="./Info Windows - Google Maps Android API v2 — Google Developers_files/css(1)" rel="stylesheet" type="text/css">
+    
+    
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="Google Developers" href="https://developers.google.com/s/opensearch.xml">
+    
+    
+    
+    <script src="./Info Windows - Google Maps Android API v2 — Google Developers_files/jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://developers.google.com/_static/78793de2ab/js/html5shim/html5.js"></script>
+    <![endif]-->
+
+    
+  <meta property="og:site_name" content="Google Developers">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://developers.google.com/maps/documentation/android/infowindows">
+  <meta property="og:locale" content="en">
+
+  <script type="text/javascript">
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'zh-cn';
+  </script>
+  
+    <title>Info Windows - Google Maps Android API v2 — Google Developers</title>
+    <meta property="og:title" content="Info Windows">
+  
+  
+
+  
+  
+  
+
+
+
+    <style>
+    
+    </style>
+  <style type="text/css"></style></head>
+  <body class=" slim   two-column docs normal-width" cz-shortcut-listen="true">
+
+  <div class="maia-max">
+
+    
+    <div id="sandbar">
+      
+        
+          
+
+
+
+
+
+<div id="maia-header" class="maia-header">
+  <header id="googlebar">
+    <div id="logo-wrapper">
+      <a id="logo" href="https://developers.google.com/">
+        <img src="./Info Windows - Google Maps Android API v2 — Google Developers_files/developers-logo.svg" alt="Google">
+      </a>
+      <script>
+      if (navigator.userAgent.match(/msie/i) && navigator.appVersion.indexOf['8'] ==0) {
+        $('#gc-logo img').attr({src:'https://developers.google.com/_static/78793de2ab/images/developers-logo.png'});
+      }
+      </script>
+    </div>
+
+    <div id="search-wrapper" class="head-sec search-wrapper2 history-enabled">
+      <form class="search" action="https://developers.google.com/s/results" method="GET" id="top-search">
+        <div id="searchbox" class="devsite-searchbox searchbox"><span class="devsite-search-chip">Google Maps Android API v2</span>
+           
+           <input type="text" name="q" class="devsite-search-query" value="" placeholder="搜索" autocomplete="off">
+        <ul class="suggest-results ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" role="menu" tabindex="0" style="display: none;"></ul></div>
+        <button id="search-button" class="button button-blue big" style="position: relative; top: 0px; left: 0px;">
+          <img src="./Info Windows - Google Maps Android API v2 — Google Developers_files/search.png" alt="Search">
+        </button>
+        
+          <input type="hidden" name="p" id="search_project" value="/maps/documentation/android" data-project-name="Google Maps Android API v2" data-project-path="/maps/documentation/android" data-query-match="">
+        
+        
+
+
+  
+  <input type="hidden" id="suggest-category-label-2" value="“Google Maps Android API v2”中的相关网页">
+  
+  <input type="hidden" id="suggest-category-label-3" value="“Google Maps Android API v2”中的相关参考网页">
+
+
+<input type="hidden" id="suggest-category-label-1" value="产品">
+
+<input type="hidden" id="suggest-all-results-label" value="查看以下查询内容的所有结果：">
+
+      </form>
+    </div>
+
+    
+    <div id="user-history">
+      <img src="./Info Windows - Google Maps Android API v2 — Google Developers_files/16x9.png" id="history-badge" class="history-closed" alt="点击此处即可查看您最近浏览的网页和最常浏览的网页。">
+    <div id="user-history-box" class="triangle-border" style="display: none;"><div class="recentColumn"><div class="historyColumnHeader">最近访问过的网页</div><ol class="historyList"><li class="historyItem"><a href="https://developers.google.com/maps/documentation/android/infowindows">Info Windows</a></li><li class="historyItem"><a href="https://developers.google.com/maps/">Google Maps API</a></li><li class="historyItem"><a href="https://developers.google.com/maps/documentation/javascript/markers">Markers</a></li><li class="historyItem"><a href="https://developers.google.com/maps/documentation/android/marker">Markers</a></li></ol></div><div class="frequentColumn"><div class="historyColumnHeader">最常访问的网页</div><ol class="historyList"><li class="historyItem"><a href="https://developers.google.com/maps/documentation/android/infowindows">Info Windows</a></li><li class="historyItem"><a href="https://developers.google.com/maps/documentation/android/marker">Markers</a></li><li class="historyItem"><a href="https://developers.google.com/maps/">Google Maps API</a></li><li class="historyItem"><a href="https://developers.google.com/maps/documentation/javascript/markers">Markers</a></li></ol></div><div id="user-history-footer"><a href="https://history.google.com/?st=gdev">History Preferences</a></div></div></div>
+    
+
+    <div id="social-wrapper" class="social">
+      
+      <span class="signed-in">
+        <div>
+          <a class"email"="" href="https://plus.google.com/me">Yifan1031@gmail.com</a>
+          <a href="https://www.google.com/accounts/Logout?continue=https://developers.google.com/maps/documentation/android/infowindows&service=ahsid">退出帐户</a>
+        </div>
+        <img class="avatar" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/photo.jpg">
+      </span>
+      
+    </div>
+  </header>
+</div>
+
+<script>
+  if (window.jQuery) {
+    $(document).ready(function() {
+      if (window.devsite && window.devsite.search) {
+        window.devsite.search.init('zh-cn', true, null, true)
+      }
+    });
+  }
+</script>
+
+        
+      
+    </div><!-- end div.sandbar -->
+    
+
+    
+    <div class="kd-butterbar">
+      <span>
+        <span class="message"></span>
+        
+        <a href="https://developers.google.com/maps/documentation/android/infowindows#" class="kd-butterbar-dismiss">隐藏</a>
+      </span>
+    </div>
+    
+    <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+      
+        
+          <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {}, &quot;gaid&quot;: &quot;UA-42966870-1&quot;}">
+        
+          <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension4&quot;: &quot;Google Maps Android API v2&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed In&quot;}, &quot;gaid&quot;: &quot;UA-24532603-1&quot;}">
+        
+          <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension4&quot;: &quot;Google Maps Android API v2&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed In&quot;}, &quot;gaid&quot;: &quot;UA-49880327-1&quot;}">
+        
+      
+
+      
+
+      
+
+<div id="gc-appnav" class="maia-aux">
+  <ol class="breadcrumbs">
+    
+    <li><a href="https://developers.google.com/products/">产品</a></li>
+    
+    <li><a href="https://developers.google.com/maps/">Google Maps API</a></li>
+    
+    <li><a href="https://developers.google.com/maps/documentation/android/">Google Maps Android API v2</a></li>
+    
+  </ol>
+</div>
+
+
+
+      
+        
+        
+          <div class="maia-aux" id="gc-appbar">
+
+          
+          
+
+  <a href="https://developers.google.com/maps/documentation/android/" class="gc-appbar-title">
+    
+    Google Maps Android API v2
+  </a>
+
+
+
+<div class="plusone-container" style="height:27px">
+  <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1431064031506" name="I0_1431064031506" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  <div class="google-feedback-container ">
+    
+    <a id="devsite-feedback-project" class="google-feedback">发送反馈</a>
+  </div>
+
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'MapView 2',
+        'version': 'devsite-20150507-r00-rc03.default'
+      },
+      document.querySelectorAll('#devsite-feedback-project'),
+      document.querySelector('#devsite-feedback-box .devsite-feedback-dropcloth'),
+      document.querySelector('#devsite-feedback-box .devsite-feedback-step1'),
+      document.querySelector('#devsite-feedback-box .devsite-feedback-cancel'),
+      document.querySelectorAll('#devsite-feedback-box .devsite-feedback-cell a')
+    );
+  });
+  </script>
+
+
+
+
+ 
+
+          
+          </div>
+
+        
+      
+
+      
+        
+          <div id="gc-main" class="main">
+        
+        
+  
+  
+      
+      
+      <div id="gc-sidebar" class="wide">
+        
+
+  <nav class="devsite-section-nav devsite-nav gc-toc"><ul class="devsite-nav-expandable"><li class="devsite-nav-item devsite-nav-item-section-expandable"><a class="devsite-nav-title devsite-nav-title-no-path " tabindex="0">Developer Guide</a><a class="devsite-nav-toggle devsite-nav-toggle-expanded"></a><ul class="devsite-nav-section devsite-nav-section-expanded"><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/intro" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Introduction</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/start" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Getting Started</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/map" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Map Objects</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/lite" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Lite Mode</a></li><li class="devsite-nav-item devsite-nav-item-section-expandable"><a class="devsite-nav-title devsite-nav-title-no-path " tabindex="0">Drawing on the Map</a><a class="devsite-nav-toggle devsite-nav-toggle-expanded"></a><ul class="devsite-nav-section devsite-nav-section-expanded"><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/marker" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Markers</a></li><li class="devsite-nav-item devsite-nav-active"><a href="https://developers.google.com/maps/documentation/android/infowindows" class="devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Info Windows</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/shapes" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Shapes</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/groundoverlay" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Ground Overlays</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/tileoverlay" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Tile Overlays</a></li></ul></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/streetview" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Street View</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/interactivity" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Interacting with the Map</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/location" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Location Data</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/views" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Changing the View</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/intents" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Google Maps Intents</a></li></ul></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/reference" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">API Reference</a></li><li class="devsite-nav-item devsite-nav-item-section-expandable"><a class="devsite-nav-title devsite-nav-title-no-path " tabindex="0">Utility Library</a><a class="devsite-nav-toggle devsite-nav-toggle-collapsed"></a><ul class="devsite-nav-section devsite-nav-section-collapsed"><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/utility" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Overview</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/utility/setup" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Setup and demo</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/utility/heatmap" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Heatmaps</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/utility/marker-clustering" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Marker Clustering</a></li></ul></li><li class="devsite-nav-item"><hr class="devsite-nav-break"></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/android/releases" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Releases</a></li><li class="devsite-nav-item"><a href="https://googlegeodevelopers.blogspot.com/" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Blog</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/support/" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Support</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/faq" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">FAQ</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/documentation/api-picker" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">API Picker</a></li><li class="devsite-nav-item"><hr class="devsite-nav-break"></li><li class="devsite-nav-item"><a href="https://developers.google.com/maps/terms" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Terms of Service</a></li><li class="devsite-nav-item"><hr class="devsite-nav-break"></li><li class="devsite-nav-item devsite-nav-deprecated"><a href="https://developers.google.com/maps/documentation/android/v1/" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Google Maps Android API v1<span class="devsite-nav-icon"></span><span class="devsite-nav-status">已弃用</span></a></li></ul></nav>
+
+
+      </div>
+      
+
+      <div id="gc-content" class="wide-sidebar">
+        
+        <div>
+  
+          
+  
+  <h1 itemprop="name" class="page-title">Info Windows</h1>
+  
+  <div itemprop="articleBody">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  body.docs section.expandable-bottom-margin {
+    margin-bottom: 1.5em;
+  }
+  body.docs section.expandable-no-left-margin {
+    margin-left: 0;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="./Info Windows - Google Maps Android API v2 — Google Developers_files/local_extensions.css" rel="stylesheet" type="text/css">
+<link href="./Info Windows - Google Maps Android API v2 — Google Developers_files/common.css" rel="stylesheet" type="text/css">
+<p></p>
+
+<p>An info window displays text or images in a popup window above the map. Info
+windows are always anchored to a <a href="https://developers.google.com/maps/documentation/android/marker">marker</a>. Their default behavior is
+to display when the marker is tapped.</p>
+<nav class="inline-toc"><ol class="toc"><li><a href="https://developers.google.com/maps/documentation/android/infowindows#introduction">Introduction</a><ol class="toc"><li><a href="./Info Windows - Google Maps Android API v2 — Google Developers_files/Info Windows - Google Maps Android API v2 — Google Developers.html">Add an info window</a></li><li><a href="https://developers.google.com/maps/documentation/android/infowindows#showhide_an_info_window">Show/Hide an info window</a></li></ol></li><li><a href="https://developers.google.com/maps/documentation/android/infowindows#custom_info_windows">Custom info windows</a></li><li><a href="https://developers.google.com/maps/documentation/android/infowindows#info_window_events">Info window events</a></li></ol></nav>
+<h2 id="introduction">Introduction</h2>
+<p>An info window allows you to display information to the user when they tap on
+a marker. Only one info window is displayed at a time. If a user clicks on
+another marker, the current info window will be hidden and the new info window
+will be displayed.</p>
+<p>An info window is drawn oriented against the device's screen, centered
+above its associated marker. The default info window contains the title
+in bold, with the (optional) snippet text below the title.</p>
+<h3 id="add_an_info_window">Add an info window</h3>
+<p>The simplest way to add an info window is to set the <code>title()</code> and <code>snippet()</code>
+methods of the corresponding marker. Setting these properties will cause an
+info window to appear whenever that marker is clicked.</p>
+<pre class="prettyprint notranslate" translate="no"><code><span class="kwd">static</span><span class="pln"> </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">LatLng</span><span class="pln"> MELBOURNE </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LatLng</span><span class="pun">(-</span><span class="lit">37.81319</span><span class="pun">,</span><span class="pln"> </span><span class="lit">144.96298</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">Marker</span><span class="pln"> melbourne </span><span class="pun">=</span><span class="pln"> mMap</span><span class="pun">.</span><span class="pln">addMarker</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MarkerOptions</span><span class="pun">()</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">position</span><span class="pun">(</span><span class="pln">MELBOURNE</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">title</span><span class="pun">(</span><span class="str">"Melbourne"</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">snippet</span><span class="pun">(</span><span class="str">"Population: 4,137,400"</span><span class="pun">));</span><span class="pln"><br></span></code></pre>
+<h3 id="showhide_an_info_window">Show/Hide an info window</h3>
+<p>Info windows are designed to respond to user touch events. If you prefer, you
+can show an info window programmatically by calling <code>showInfoWindow()</code> on the
+target marker. An info window can be hidden by calling <code>hideInfoWindow()</code>.</p>
+<pre class="prettyprint notranslate" translate="no"><code><span class="kwd">static</span><span class="pln"> </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">LatLng</span><span class="pln"> MELBOURNE </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LatLng</span><span class="pun">(-</span><span class="lit">37.81319</span><span class="pun">,</span><span class="pln"> </span><span class="lit">144.96298</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">Marker</span><span class="pln"> melbourne </span><span class="pun">=</span><span class="pln"> mMap</span><span class="pun">.</span><span class="pln">addMarker</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MarkerOptions</span><span class="pun">()</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">position</span><span class="pun">(</span><span class="pln">MELBOURNE</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">title</span><span class="pun">(</span><span class="str">"Melbourne"</span><span class="pun">));</span><span class="pln"><br>melbourne</span><span class="pun">.</span><span class="pln">showInfoWindow</span><span class="pun">();</span><span class="pln"><br></span></code></pre>
+<h2 id="custom_info_windows">Custom info windows</h2>
+<p>You are also able to customize the contents and design of info windows.
+To do this, you must create a concrete implementation of the
+<a href="https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.InfoWindowAdapter.html"><code>InfoWindowAdapter</code></a> interface and then call
+<a href="https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#setInfoWindowAdapter(com.google.android.gms.maps.GoogleMap.InfoWindowAdapter)"><code>GoogleMap.setInfoWindowAdapter()</code></a> with your
+implementation. The interface contains two methods for you to implement:
+<code>getInfoWindow(Marker)</code> and <code>getInfoContents(Marker)</code>. The API will
+first call <code>getInfoWindow(Marker)</code> and if <code>null</code> is returned, it will then
+call <code>getInfoContents(Marker)</code>. If this also returns <code>null</code>, then the
+default info window will be used.</p>
+<p>The first of these (<code>getInfoWindow()</code>) allows you to provide a view that
+will be used for the entire info window. The second of these
+(<code>getInfoContents()</code>) allows you to just customize the contents of the window
+but still keep the default info window frame and background.</p>
+<aside class="note"><strong>Note:</strong><span> The info window that is drawn is <em>not</em> a live view. The view is
+rendered as an image (using <code>View.draw(Canvas)</code>) at the time it is returned.
+This means that any subsequent changes to the view will not be reflected by
+the info window on the map. To update the info window later (for example,
+after an image has loaded), call <code>showInfoWindow()</code>. Furthermore, the info
+window will not respect any of the interactivity typical for a normal view
+such as touch or gesture events. However you can listen to a generic click
+event on the whole info window as described in the section below.</span></aside>
+<p>The images below show a default info window, an info window with customized contents, and an info window with customized frame and background.</p>
+<p><img alt="Info Window Comparison" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/marker-infowindows.png" title="Comparison of info windows."></p>
+<h2 id="info_window_events">Info window events</h2>
+<p>You can use an <a href="https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.OnInfoWindowClickListener.html"><code>OnInfoWindowClickListener</code></a> to
+listen to click events on an info window. To set this listener on the map,
+call <code>GoogleMap.setOnInfoWindowClickListener(OnInfoWindowClickListener)</code>. When
+a user clicks on an info window, <code>onInfoWindowClick(Marker)</code> will be called
+and the info window will be highlighted in the default highlight color (Holo
+Blue for devices running Ice Cream Sandwich and newer, orange for earlier
+versions of Android).</p>
+<p>As mentioned in the previous section on info windows, an info window is not a
+live <code>View</code>, rather the view is rendered as an image onto the map. As a
+result, any listeners you set on the view are disregarded and you cannot
+distinguish between click events on various parts of the view. You are advised
+not to place interactive components — such as buttons, checkboxes, or text
+inputs — within your custom info window.</p>
+
+  </div>
+
+  
+        </div>
+        
+<div id="gc-content-footer">
+
+<div id="gc-content-license">
+
+    
+      
+        <p>本页面中的内容已获得<a href="http://creativecommons.org/licenses/by/3.0/">知识共享署名3.0许可</a>，并且代码示例已获得<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0许可</a>；另有说明的情况除外。有关详情，请参阅我们的<a href="https://developers.google.com/site-policies">网站政策</a>。</p>
+      
+    
+    
+    
+
+</div>
+
+
+
+<div itemprop="datePublished" content="2015-04-28T17:45:05.849100" id="gc-content-last-updated">上次更新日期：四月 28, 2015</div>
+
+</div>
+
+
+      </div>
+  
+
+        
+      </div>
+        
+      
+      
+        
+          
+        
+      
+
+      
+
+  
+
+  
+       <!-- not (if site.theme == 'maia' or site.theme == 'maia-cloud') -->
+      <div id="gc-footer-container">
+        <footer id="gc-footer">
+          
+
+
+
+
+        <div id="maia-footer-local" class="footer-local">
+          <div id="footer-top" class="maia-aux">
+            <div class="footer-top-wrap">
+
+             <div class="search-wrap new_left">
+               <div class="dev-wrap new_left">
+                 <a href="https://developers.google.com/"><img src="./Info Windows - Google Maps Android API v2 — Google Developers_files/developers-logo.png"></a>
+               </div>
+               <form class="search new_left" action="https://developers.google.com/s/results" method="GET" id="footer-search">
+                 <div id="searchbox" class="devsite-searchbox searchbox new_left">
+                   <input type="text" name="q" class="devsite-search-query" placeholder="Search" autocomplete="off">
+                 </div>
+                 <button id="search-button" class="button button-blue big new_left">
+                   <img src="./Info Windows - Google Maps Android API v2 — Google Developers_files/search.png" alt="Search">
+                 </button>
+               </form>
+             </div>
+             <div class="plus-wrap new_left">
+               <div class="plus">
+                 <div id="___follow_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 133px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 133px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I1_1431064031510" name="I1_1431064031510" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/follow.html" data-gapiattached="true"></iframe></div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+      <div id="footer-list" class="maia-aux">
+    <div class="footer-list-wrap  maia-cols">
+      <div class="maia-col-3">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="https://developers.google.com/products/">Products</a></li>
+          <li><a href="https://developers.google.com/showcase/">Showcase</a></li>
+          <li><a href="https://developers.google.com/events/">Events</a></li>
+          <li><a href="https://developers.google.com/community/">Communities</a></li>
+        </ul>
+      </div>
+      <div class="maia-col-3">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="http://googledevelopers.blogspot.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Blog Link">Blog</a></li>
+          <li><a href="https://plus.google.com/+GoogleDevelopers/posts" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer G+ Link">Google+ Community</a></li>
+          <li><a href="http://www.youtube.com/user/GoogleDevelopers" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer YouTube Link">YouTube Channel</a></li>
+          <li><a class="google-feedback" id="devsite-feedback-site">报告问题</a></li>
+          <li><a href="https://developers.google.com/careers/">Jobs</a></li>
+        </ul>
+      </div>
+      
+      <script type="text/javascript">
+      $(document).ready(function() {
+        new devsite.feedback.Widget({
+            'product_id': '81425',
+            'bucket': 'Documentation',
+            'version': 'devsite-20150507-r00-rc03.default'
+          },
+          document.querySelectorAll('#devsite-feedback-site'),
+          null,
+          null,
+          null,
+          null
+        );
+      });
+      </script>
+      <div class="maia-col-3">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="https://developers.google.com/groups/">Groups</a></li>
+          <li><a href="https://developers.google.com/experts/">Experts</a></li>
+          <li><a href="https://developers.google.com/startups/">Startups</a></li>
+          <li><a href="https://www.womentechmakers.com/">Women Techmakers</a></li>
+        </ul>
+      </div>
+      <div class="maia-col-3">
+        <h4>Top Products</h4>
+        <ul class="top-prod-1 left">
+          <li><a href="https://developers.google.com/ads/">Ads</a></li>
+          <li><a href="https://developers.google.com/analytics/">Analytics</a></li>
+          <li><a href="https://developer.android.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link">Android</a></li>
+          <li><a href="https://developers.google.com/cast/">Cast</a></li>
+          <li><a href="https://developers.google.com/chrome/">Chrome</a></li>
+          <li><a href="https://cloud.google.com/docs/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cloud Link">Cloud</a></li>
+        </ul>
+        <ul class="top-prod-2 left">
+          <li><a href="https://developers.google.com/google-apps/">Google Apps</a></li>
+          <li><a href="https://developers.google.com/+/">Google+</a></li>
+          <li><a href="https://developers.google.com/maps/">Maps</a></li>
+          <li><a href="https://developers.google.com/search/">Search</a></li>
+          <li><a href="https://developers.google.com/commerce/wallet/">Wallet</a></li>
+          <li><a href="https://developers.google.com/youtube/">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div><!-- END DIV#MAIA-FOOTER-LOCAL -->
+
+<div id="maia-footer-global" class="footer-global">
+  <div class="maia-aux">
+    <span id="terms">
+      <a href="https://developers.google.com/site-terms/">Terms of Use</a>
+    </span>
+    <span class="pipe">
+    </span>
+    <span id="privacy">
+      <a href="http://www.google.com/intl/en/privacy/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Privacy Link">Privacy Policy</a>
+    </span>
+
+    
+    <div id="gc-language" class="new_right">
+    <ul>
+      <li>
+        <form id="setlang" action="https://developers.google.com/i18n/setlang/" method="post">
+          <input type="hidden" name="xsrf_token" value="mOvP8l196JtmzU1XzTpFdgIPSRbUzWaWdP5IqkckBCI6MTQzMTA2NDAyOTQ3MDcyMA">
+          <select id="footer_language" name="language" style="display: none;">
+            <option value="ar">
+                العربيّة
+              </option><option value="bg">
+                български
+              </option><option value="ca">
+                català
+              </option><option value="zh-cn" selected="selected">
+                简体中文
+              </option><option value="zh-tw">
+                繁體中文
+              </option><option value="hr">
+                Hrvatski
+              </option><option value="cs">
+                česky
+              </option><option value="da">
+                dansk
+              </option><option value="nl">
+                Nederlands
+              </option><option value="en">
+                English
+              </option><option value="fa">
+                فارسی
+              </option><option value="fi">
+                suomi
+              </option><option value="fr">
+                français
+              </option><option value="de">
+                Deutsch
+              </option><option value="el">
+                Ελληνικά
+              </option><option value="he">
+                עברית
+              </option><option value="hi">
+                Hindi
+              </option><option value="hu">
+                Magyar
+              </option><option value="id">
+                Bahasa Indonesia
+              </option><option value="it">
+                italiano
+              </option><option value="ja">
+                日本語
+              </option><option value="ko">
+                한국어
+              </option><option value="lv">
+                latviešu
+              </option><option value="lt">
+                Lithuanian
+              </option><option value="nb">
+                norsk (bokmål)
+              </option><option value="nn">
+                norsk (nynorsk)
+              </option><option value="pl">
+                polski
+              </option><option value="pt-br">
+                Português Brasileiro
+              </option><option value="pt">
+                Português
+              </option><option value="ro">
+                Română
+              </option><option value="ru">
+                Русский
+              </option><option value="sr">
+                српски
+              </option><option value="sk">
+                slovenský
+              </option><option value="sl">
+                Slovenščina
+              </option><option value="es">
+                español
+              </option><option value="sv">
+                svenska
+              </option><option value="th">
+                Thai
+              </option><option value="tr">
+                Türkçe
+              </option><option value="uk">
+                Українська
+              </option><option value="vi">
+                Vietnamese
+              </option>
+          </select><span class="kd-button kd-menubutton kd-select"><div style="display: inline-block;"><div class="label" style="float: left;">
+                简体中文
+              </div><div class="kd-disclosureindicator"></div></div></span>
+        </form>
+      </li>
+    </ul>
+    </div>
+    
+  </div>
+</div><!-- END DIV#MAIA-FOOTER-GLOBAL -->
+
+        </footer>
+      </div>
+      
+
+      
+      
+  
+
+    </div>
+
+    <div id="search-autocomplete" class="search-results search-autocomplete" style="display:none"></div>
+    <script type="text/javascript" async="" defer="" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/api.js"></script>
+
+    
+    <script>
+      (function($) {
+        var cssHref = $('#screen-foot').attr('data-href');
+        $('#screen-foot').attr('href', cssHref);
+        $('#screen-foot').load(function() {
+          
+          devsite.timing.tick('cl');
+        });
+      })(jQuery);
+    </script>
+    
+
+    <script id="jqueryui" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/jquery-ui.min.js"></script>
+    
+    <script type="text/javascript" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/saved_resource"></script>
+    <script src="./Info Windows - Google Maps Android API v2 — Google Developers_files/script_foot_closure__zh_cn.js"></script>
+    <script src="./Info Windows - Google Maps Android API v2 — Google Developers_files/script_foot.js"></script>
+    <script>
+      
+      devsite.timing.tick('jl');
+      (function($) {
+        devsite.devsite.Init($, 'devsite',
+            '["user-history-launch"]', '',
+            'zh-cn', true,
+            '78793de2ab', 'Yifan1031@gmail.com',
+            false,
+            {"296e8173cd0024b4839dd7f3d7fa4387": true, "04f8c40014dc472fb1b95e175fb1b9fd": true, "6749dcb526ce9bde6993550c7d928d24": true, "993b1906435224595bd618f6f331ee45": true, "6e6d95ece619bf85cc1ea2c6da8a4690": true});
+      })(jQuery);
+
+      
+      devsite.localInit = function() {
+        
+      };
+    </script>
+
+    
+
+    
+
+    <script type="text/javascript">
+    $('#setlang select').each(function() {
+      if (navigator.userAgent.match(/msie/i)) {
+        $(this).change(function() {
+          $('#setlang').submit();
+        });
+      } else {
+        $(this).kdSelect({'change': function() {
+          $('#setlang').submit();
+        }});
+      }
+    });
+    </script>
+
+    
+
+    
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 992540712;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+      var google_conversion_value = 0;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/conversion.js"></script><img height="1" width="1" border="0" alt="" src="https://www.googleadservices.com/pagead/conversion/992540712/?random=1431064031077&cv=7&fst=1431064031077&num=1&fmt=3&value=0&label=qio2CKCPwQMQqPCj2QM&bg=ffffff&hl=en&guid=ON&u_h=800&u_w=1280&u_ah=777&u_aw=1242&u_cd=24&u_his=1&u_tz=600&u_java=true&u_nplug=6&u_nmime=8&frm=0&url=https%3A//developers.google.com/maps/documentation/android/infowindows&ref=https%3A//www.google.com.au/&vis=1">
+    <noscript>
+      &lt;img style="display:none;" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+    </noscript>
+
+    
+
+    
+    
+    <script async="" defer="" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/async_survey"></script>
+    
+
+    
+
+
+
+<script type="text/javascript" defer="">
+
+
+</script>
+
+
+
+
+  </div><ul class="kd-menulist" style="display: none; position: absolute; top: 1808.80004882813px; right: 0px; bottom: auto; left: auto; height: 1280px; padding: 0px;"><li class="kd-menulistitem">
+                العربيّة
+              </li><li class="kd-menulistitem">
+                български
+              </li><li class="kd-menulistitem">
+                català
+              </li><li class="kd-menulistitem selected">
+                简体中文
+              </li><li class="kd-menulistitem">
+                繁體中文
+              </li><li class="kd-menulistitem">
+                Hrvatski
+              </li><li class="kd-menulistitem">
+                česky
+              </li><li class="kd-menulistitem">
+                dansk
+              </li><li class="kd-menulistitem">
+                Nederlands
+              </li><li class="kd-menulistitem">
+                English
+              </li><li class="kd-menulistitem">
+                فارسی
+              </li><li class="kd-menulistitem">
+                suomi
+              </li><li class="kd-menulistitem">
+                français
+              </li><li class="kd-menulistitem">
+                Deutsch
+              </li><li class="kd-menulistitem">
+                Ελληνικά
+              </li><li class="kd-menulistitem">
+                עברית
+              </li><li class="kd-menulistitem">
+                Hindi
+              </li><li class="kd-menulistitem">
+                Magyar
+              </li><li class="kd-menulistitem">
+                Bahasa Indonesia
+              </li><li class="kd-menulistitem">
+                italiano
+              </li><li class="kd-menulistitem">
+                日本語
+              </li><li class="kd-menulistitem">
+                한국어
+              </li><li class="kd-menulistitem">
+                latviešu
+              </li><li class="kd-menulistitem">
+                Lithuanian
+              </li><li class="kd-menulistitem">
+                norsk (bokmål)
+              </li><li class="kd-menulistitem">
+                norsk (nynorsk)
+              </li><li class="kd-menulistitem">
+                polski
+              </li><li class="kd-menulistitem">
+                Português Brasileiro
+              </li><li class="kd-menulistitem">
+                Português
+              </li><li class="kd-menulistitem">
+                Română
+              </li><li class="kd-menulistitem">
+                Русский
+              </li><li class="kd-menulistitem">
+                српски
+              </li><li class="kd-menulistitem">
+                slovenský
+              </li><li class="kd-menulistitem">
+                Slovenščina
+              </li><li class="kd-menulistitem">
+                español
+              </li><li class="kd-menulistitem">
+                svenska
+              </li><li class="kd-menulistitem">
+                Thai
+              </li><li class="kd-menulistitem">
+                Türkçe
+              </li><li class="kd-menulistitem">
+                Українська
+              </li><li class="kd-menulistitem">
+                Vietnamese
+              </li></ul><!-- END DIV.MAIA-MAX -->
+  
+
+  
+    
+    <span id="devsite-request-elapsed" data-request-elapsed="1337.55016327"></span>
+  
+
+<div id="contain-402"></div><script src="./Info Windows - Google Maps Android API v2 — Google Developers_files/prompt"></script><embed id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd" type="application/thunder_download_plugin" height="0" width="0"><iframe name="oauth2relay303769863" id="oauth2relay303769863" src="./Info Windows - Google Maps Android API v2 — Google Developers_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

@@ -1,0 +1,130 @@
+
+/* gettext library */
+
+var catalog = new Array();
+
+function pluralidx(count) { return (count == 1) ? 0 : 1; }
+catalog[' visible URL, ad extensions) is 6px.'] = ' \u4e0d\u5f97\u8d85\u8fc7 6 \u50cf\u7d20\u3002';
+catalog[' within an ad unit (i.e. title, '] = ' \u53ef\u89c6\u7f51\u5740\u3001\u5e7f\u544a\u9644\u52a0\u4fe1\u606f\uff09\u4e2d\u5404\u79cd\u5b57\u4f53\u5927\u5c0f\u95f4\u7684\u5dee\u8ddd ';
+catalog['%(count)s results'] = '%(count)s \u6761\u7ed3\u679c';
+catalog['All %(count)s results'] = '\u5168\u90e8 %(count)s \u6761\u7ed3\u679c';
+catalog['Click to insert your credentials'] = '\u70b9\u51fb\u5373\u53ef\u63d2\u5165\u60a8\u7684\u51ed\u636e';
+catalog['Close'] = '\u5173\u95ed';
+catalog['Could not load project credentials.'] = '\u65e0\u6cd5\u52a0\u8f7d\u9879\u76ee\u51ed\u636e\u3002';
+catalog['Could not load projects list.'] = '\u65e0\u6cd5\u52a0\u8f7d\u9879\u76ee\u5217\u8868\u3002';
+catalog['Could not save your project selection.'] = '\u65e0\u6cd5\u4fdd\u5b58\u60a8\u7684\u9879\u76ee\u504f\u597d\u8bbe\u7f6e\u3002';
+catalog['Credentials'] = '\u51ed\u636e';
+catalog['Error: The maximum difference allowed between font sizes'] = '\u9519\u8bef\uff1a\u5e7f\u544a\u5355\u5143\uff08\u5373\u6807\u9898\u3001';
+catalog['Error: The maximum number of ads allowed is 10'] = '\u9519\u8bef\uff1a\u5141\u8bb8\u7684\u5e7f\u544a\u6570\u91cf\u4e0a\u9650\u4e3a 10 \u4e2a';
+catalog['Excellent documentation'] = '\u6587\u6863\u5f88\u597d\u7528';
+catalog['Good documentation'] = '\u6587\u6863\u4e0d\u9519';
+catalog['History Preferences'] = '\u8bb0\u5f55\u504f\u597d\u8bbe\u7f6e';
+catalog['How can we improve this page?'] = '\u6b64\u9875\u8be5\u5982\u4f55\u6539\u8fdb\uff1f';
+catalog['Insert Credential'] = '\u63d2\u5165\u51ed\u636e';
+catalog['Insert'] = '\u63d2\u5165';
+catalog['It doesn\'t have what I need.'] = '\u7f51\u9875\u4e2d\u6ca1\u6709\u6211\u9700\u8981\u7684\u4fe1\u606f\u3002';
+catalog['It\'s inaccurate.'] = '\u7f51\u9875\u4fe1\u606f\u6709\u8bef\u3002';
+catalog['Loading Credentials'] = '\u6b63\u5728\u52a0\u8f7d\u51ed\u636e';
+catalog['Loading Projects'] = '\u6b63\u5728\u52a0\u8f7d\u9879\u76ee';
+catalog['Loading your history...'] = '\u6b63\u5728\u52a0\u8f7d\u60a8\u7684\u8bb0\u5f55\u2026';
+catalog['Most Recently Visited'] = '\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u7f51\u9875';
+catalog['My Most Visited'] = '\u6700\u5e38\u8bbf\u95ee\u7684\u7f51\u9875';
+catalog['OK documentation'] = 'OK documentation';
+catalog['Other (use text area above)'] = '\u5176\u4ed6\uff08\u8bf7\u5728\u4e0a\u65b9\u6587\u672c\u533a\u57df\u4e2d\u8bf4\u660e\uff09';
+catalog['Place this code where you want your ad unit to appear. <br><br>'] = '\u5c06\u8fd9\u6bb5\u4ee3\u7801\u653e\u5230\u8981\u663e\u793a\u5e7f\u544a\u5355\u5143\u7684\u4f4d\u7f6e\u3002<br><br>';
+catalog['Place this code where you want your ad unit to appear.<br><br>'] = '\u5c06\u8fd9\u6bb5\u4ee3\u7801\u653e\u5230\u8981\u663e\u793a\u5e7f\u544a\u5355\u5143\u7684\u4f4d\u7f6e\u3002<br><br>';
+catalog['Place this code where you want your first ad unit to appear. '] = '\u5c06\u8fd9\u6bb5\u4ee3\u7801\u653e\u5230\u8981\u663e\u793a\u7b2c 1 \u4e2a\u5e7f\u544a\u5355\u5143\u7684\u4f4d\u7f6e\u3002 ';
+catalog['Please enter a width in pixels.'] = '\u8bf7\u8f93\u5165\u5bbd\u5ea6\uff08\u4ee5\u50cf\u7d20\u4e3a\u5355\u4f4d\uff09\u3002';
+catalog['Please enter the part of your client-ID that comes after partner-'] = '\u8bf7\u8f93\u5165\u60a8\u7684\u90e8\u5206\u5ba2\u6237\u7aef ID\uff08partner- \u4e4b\u540e\u7684\u90e8\u5206\uff09';
+catalog['Please enter the pub-id using the pub-0000000000000000 format'] = '\u8bf7\u4f7f\u7528 pub-0000000000000000 \u683c\u5f0f\u8f93\u5165\u53d1\u5e03\u5546 ID';
+catalog['Poor documentation'] = 'Poor documentation';
+catalog['Project'] = '\u9879\u76ee';
+catalog['Rate this page'] = '\u7ed9\u6b64\u7f51\u9875\u8bc4\u5206';
+catalog['Sign in to insert your credentials.'] = '\u767b\u5f55\u5373\u53ef\u63d2\u5165\u60a8\u7684\u51ed\u636e\u3002';
+catalog['Sign in to view your recently visited pages.'] = '\u767b\u5f55\u5373\u53ef\u67e5\u770b\u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u7f51\u9875\u3002';
+catalog['Sorry. We couldn\'t load the credentials for this project. You can visit the %(start_link)sDevelopers Console%(end_link)s to see them.'] = 'Sorry. We couldn\'t load the credentials for this project. You can visit the %(start_link)sDevelopers Console%(end_link)s to see them.';
+catalog['Sorry. We couldn\'t load your projects. You can visit the %(start_link)sDevelopers Console%(end_link)s to see them.'] = 'Sorry. We couldn\'t load your projects. You can visit the %(start_link)sDevelopers Console%(end_link)s to see them.';
+catalog['The Google Developers website now saves the pages you visit when you are logged into Google. You can quickly access them via the history icon at the top of the site. %(link_html)sManage History%(end_link_html)s'] = '\u5982\u679c\u60a8\u767b\u5f55\u4e86 Google \u5e10\u6237\uff0cGoogle Developers \u7f51\u7ad9\u73b0\u5728\u4f1a\u4fdd\u5b58\u60a8\u8bbf\u95ee\u8fc7\u7684\u7f51\u9875\u3002\u60a8\u53ea\u8981\u70b9\u51fb\u7f51\u7ad9\u9876\u90e8\u7684\u5386\u53f2\u8bb0\u5f55\u56fe\u6807\uff0c\u5373\u53ef\u5feb\u901f\u8bbf\u95ee\u8fd9\u4e9b\u7f51\u9875\u3002%(link_html)s\u7ba1\u7406\u5386\u53f2\u8bb0\u5f55%(end_link_html)s';
+catalog['There\'s a typo, broken link, or layout problem.'] = '\u7f51\u9875\u4e2d\u5b58\u5728\u9519\u522b\u5b57\u3001\u635f\u574f\u7684\u94fe\u63a5\u6216\u5e03\u5c40\u95ee\u9898\u3002';
+catalog['This project has no appropriate credentials. You can add one in the %(start_link)sDevelopers Console%(end_link)s.'] = 'This project has no appropriate credentials. You can add one in the %(start_link)sDevelopers Console%(end_link)s.';
+catalog['Turn on %(begin_link_html)shistory%(end_link_html)s to view recently visited pages.'] = '\u542f\u7528%(begin_link_html)s\u5386\u53f2\u8bb0\u5f55%(end_link_html)s\u529f\u80fd\u5373\u53ef\u67e5\u770b\u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u7f51\u9875\u3002';
+catalog['Unusable documentation'] = '\u6587\u6863\u6839\u672c\u6ca1\u6cd5\u7528';
+catalog['Warning: Longer Headlines can only be used in wide ad'] = '\u8b66\u544a\uff1a\u52a0\u957f\u578b\u6807\u9898\u53ea\u80fd\u7528\u4e8e\u8f83\u5bbd\u7684\u5e7f\u544a';
+catalog['You have no projects. You can create one in the %(start_link)sDevelopers Console%(end_link)s.'] = 'You have no projects. You can create one in the %(start_link)sDevelopers Console%(end_link)s.';
+catalog['You rated "%(rating_description)s" on %(rating_date)s'] = '\u60a8\u5728 %(rating_date)s\u7ed9\u51fa\u7684\u8bc4\u5206\u4e3a\u201c%(rating_description)s\u201d';
+catalog['You rated "%(rating_description)s"'] = '\u60a8\u7ed9\u51fa\u7684\u8bc4\u5206\u4e3a\u201c%(rating_description)s\u201d';
+catalog['Your browsing history on Google Developers will appear here.'] = '\u60a8\u5728 Google Developers \u4e0a\u7684\u6d4f\u89c8\u8bb0\u5f55\u5c06\u663e\u793a\u5728\u8fd9\u91cc\u3002';
+catalog['units. Please ensure the ads don\'t wrap.'] = '\u5355\u5143\u3002\u8bf7\u786e\u4fdd\u5e7f\u544a\u672a\u7ecf\u8fc7\u5c01\u88c5\u3002';
+
+
+function gettext(msgid) {
+  var value = catalog[msgid];
+  if (typeof(value) == 'undefined') {
+    return msgid;
+  } else {
+    return (typeof(value) == 'string') ? value : value[0];
+  }
+}
+
+function ngettext(singular, plural, count) {
+  value = catalog[singular];
+  if (typeof(value) == 'undefined') {
+    return (count == 1) ? singular : plural;
+  } else {
+    return value[pluralidx(count)];
+  }
+}
+
+function gettext_noop(msgid) { return msgid; }
+
+function pgettext(context, msgid) {
+  var value = gettext(context + '\x04' + msgid);
+  if (value.indexOf('\x04') != -1) {
+    value = msgid;
+  }
+  return value;
+}
+
+function npgettext(context, singular, plural, count) {
+  var value = ngettext(context + '\x04' + singular, context + '\x04' + plural, count);
+  if (value.indexOf('\x04') != -1) {
+    value = ngettext(singular, plural, count);
+  }
+  return value;
+}
+
+function interpolate(fmt, obj, named) {
+  if (named) {
+    return fmt.replace(/%\(\w+\)s/g, function(match){return String(obj[match.slice(2,-2)])});
+  } else {
+    return fmt.replace(/%s/g, function(match){return String(obj.shift())});
+  }
+}
+
+/* formatting library */
+
+var formats = new Array();
+
+formats['DATETIME_FORMAT'] = 'N j, Y, P';
+formats['DATE_FORMAT'] = 'N j, Y';
+formats['DECIMAL_SEPARATOR'] = '.';
+formats['MONTH_DAY_FORMAT'] = 'F j';
+formats['NUMBER_GROUPING'] = '0';
+formats['TIME_FORMAT'] = 'P';
+formats['FIRST_DAY_OF_WEEK'] = '0';
+formats['TIME_INPUT_FORMATS'] = ['%H:%M:%S', '%H:%M'];
+formats['THOUSAND_SEPARATOR'] = ',';
+formats['DATE_INPUT_FORMATS'] = ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y'];
+formats['YEAR_MONTH_FORMAT'] = 'F Y';
+formats['SHORT_DATE_FORMAT'] = 'm/d/Y';
+formats['SHORT_DATETIME_FORMAT'] = 'm/d/Y P';
+formats['DATETIME_INPUT_FORMATS'] = ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M', '%m/%d/%y'];
+
+function get_format(format_type) {
+    var value = formats[format_type];
+    if (typeof(value) == 'undefined') {
+      return format_type;
+    } else {
+      return value;
+    }
+}
